@@ -7,21 +7,16 @@ import Button from 'components/Button/Button';
 const App = () => {
   const [ counter,setCounter ] = useState(0)
 
-  const increaseByOne =()=>{
-    setCounter(counter+1);
+  const changeCount = (delta)=>{
+    setCounter(counter+delta);
   }
-  const decreasByOne = ()=>{
-    setCounter(counter-1);
-  }
-  const reset = ()=>{
-    setCounter(0);
-  }
+  
   return (
     <div>
       <Display counter={counter}/>
-      <Button text = {"increase"} handler={increaseByOne}/>
-      <Button text={"decrease"} handler={decreasByOne}/>
-      <Button text={"reset"} handler={reset}/>
+      <Button text = {"increas"} onClick={changeCount} delta={1} />
+      <Button text={"decrease"} onClick={changeCount} delta={-1}/>
+      <Button text={"reset"} onClick={changeCount} delta={-counter}/>
     </div>
   )
 }

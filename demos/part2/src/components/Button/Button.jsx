@@ -1,13 +1,18 @@
 const Button = (props) => {
-    const {text,handler} = props;
+    
 
+    const handleClick = ()=>{
+        console.log("hhel");
+    }
+    
     return(
         <div>
-            <button onClick={handler}>
-                {text}
+            <button onClick={ () => handleClick()} data-delta={delta}>
+                OUI MONSIEUR
             </button>
         </div>
     )
 }
+
 
 export default Button;
