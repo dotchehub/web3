@@ -1,14 +1,9 @@
 const Button = (props) => {
     
-
-    const handleClick = ()=>{
-        console.log("hhel");
-    }
-    
     return(
         <div>
-            <button onClick={ () => handleClick()} data-delta={delta}>
-                OUI MONSIEUR
+            <button onClick={ () => console.log()} >
+                hel
             </button>
         </div>
     )
